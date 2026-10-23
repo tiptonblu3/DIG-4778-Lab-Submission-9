@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class Arrow : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(Vector3.up * Time.deltaTime * 8f);
+
+        if (transform.position.y > 11f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+}
