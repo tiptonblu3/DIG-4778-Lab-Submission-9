@@ -15,7 +15,7 @@ public class Arrow : MonoBehaviour
 
         if (transform.position.y > 11f)
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
