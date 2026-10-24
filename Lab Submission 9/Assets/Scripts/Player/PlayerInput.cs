@@ -52,21 +52,22 @@ public class PlayerInput : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        GameObject projectile = GetProjectile(); 
+        GameObject projectile = GetProjectile(); // grabs projectile
 
         if (projectile == null)
         {
             return;
         }
+        if (!playerStats.canShoot) return;
     
-        if (context.performed && playerStats.canShoot)
+        if (context.performed && playerStats.canShoot) // if conditions are met
         {
-            projectile.transform.position = transform.position + new Vector3(0, 1, 0);
-            projectile.transform.rotation = Quaternion.identity;
-            projectile.SetActive(true);
+            projectile.transform.position = transform.position + new Vector3(0, 1, 0); // set position
+            projectile.transform.rotation = Quaternion.identity; // set rotation
+            projectile.SetActive(true); // make active, arrow script makes the projectiles inactive past a certain distance
 
             //gameObject obj = Instantiate(playerStats.arrowPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-            playerStats.canShoot = false;
+            playerStats.canShoot = false; 
             StartCoroutine("Cooldown");
         }
     }
