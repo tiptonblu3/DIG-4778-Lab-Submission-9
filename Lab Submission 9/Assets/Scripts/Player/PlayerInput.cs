@@ -52,14 +52,13 @@ public class PlayerInput : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        GameObject projectile = GetProjectile(); // grabs projectile
 
-        if (projectile == null)
-        {
-            return;
-        }
+        if (!context.performed) return;
+
         if (!playerStats.canShoot) return;
-    
+
+        GameObject projectile = Instantiate(playerStats.arrowPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+
         if (context.performed && playerStats.canShoot) // if conditions are met
         {
             projectile.transform.position = transform.position + new Vector3(0, 1, 0); // set position
