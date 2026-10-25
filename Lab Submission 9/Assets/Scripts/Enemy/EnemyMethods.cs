@@ -6,14 +6,14 @@ public class EnemyMethods : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (transform.position.x >= 0)
-        {
-            enemyStats.right = false;
-        }
-        else
-        {
-            enemyStats.right = true;
-        }
+        // if (transform.position.x >= 0)
+        // {
+        //     enemyStats.right = false;
+        // }
+        // else
+        // {
+        //     enemyStats.right = true;
+        // }
 
         
     }

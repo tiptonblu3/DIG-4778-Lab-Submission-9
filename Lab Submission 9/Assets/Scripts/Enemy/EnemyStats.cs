@@ -5,5 +5,5 @@ public class EnemyStats : MonoBehaviour
 {
     public bool right;
     public bool dead;
-    public float speed = 3;
+    public int speed = 3;
 }

@@ -30,9 +30,15 @@ public class EnemySpawner : MonoBehaviour
             // Check if the list has items to prevent errors
             if (enemies != null && enemies.Count > 0)
             {
-                int index = Random.Range(0, enemies.Count); // Selects a random prefab index
-                GameObject enemyPrefab = enemies[index]; // Get random GameObject
-                Instantiate(enemyPrefab, transform.position, Quaternion.identity); // Spawn it
+                GameObject selectedPrefab = enemies[Random.Range(0, enemies.Count)];
+                int randomSpeed = Random.Range(2, 6);
+
+                // Fluent assembly step-by-step
+                GameObject newEnemy = new EnemyBuilder()
+                .FromPrefab(selectedPrefab)
+                .AtPosition(transform.position)
+                .WithSpeed(randomSpeed)
+                .Build();
             }
 
             // Randomize the spawn time for the next iteration
