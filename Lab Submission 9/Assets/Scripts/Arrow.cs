@@ -20,7 +20,7 @@ public class Arrow : MonoBehaviour
 
         if (transform.position.y > 11f)
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
     public void OnTriggerEnter2D(Collider2D other)
@@ -33,7 +33,7 @@ public class Arrow : MonoBehaviour
             Debug.Log("it is detecting");
 
             Destroy(other.gameObject);
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
 
         }
     }

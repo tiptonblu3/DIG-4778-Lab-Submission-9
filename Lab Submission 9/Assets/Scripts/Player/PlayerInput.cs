@@ -57,7 +57,7 @@ public class PlayerInput : MonoBehaviour
 
         if (!playerStats.canShoot) return;
 
-        GameObject projectile = Instantiate(playerStats.arrowPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        GameObject projectile = GetProjectile();
 
         if (context.performed && playerStats.canShoot) // if conditions are met
         {
