@@ -5,21 +5,24 @@ public class TransformSaver : MonoBehaviour, ISaveable
 {
     [SerializeField] private string saveID;
     
-    public string SaveID => saveID;
+    public string SaveID
+    {
+        get { return saveID; }
+    }
     
     void Awake()
     {
-        SaveID = Guid.NewGuid().ToString();
+        saveID = Guid.NewGuid().ToString();
     }
 
     public TransformSaveData GetSaveData()
     {
         return new TransformSaveData // saves position and rotation of player / enemy
-        (
+        {
             saveID = SaveID,
             position = transform.position,
             rotation = transform.rotation
-        );
+        };
     }
 
     public void LoadFromData (TransformSaveData data)

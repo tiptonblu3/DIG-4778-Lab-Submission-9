@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public interface ISaveable
 {
     string SaveID { get; }
-    TransformSaveData SavedData { get; }
+    TransformSaveData GetSaveData();
     void LoadFromData(TransformSaveData data);
 
 }
