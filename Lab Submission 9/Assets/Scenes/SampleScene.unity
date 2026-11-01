@@ -630,6 +630,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &907325439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907325441}
+  - component: {fileID: 907325440}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &907325440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907325439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af55dca0d698f814bbb822863379c8d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveLoad
+  fileName: gamesave
+--- !u!4 &907325441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907325439}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181476071
 GameObject:
   m_ObjectHideFlags: 0
@@ -3678,6 +3723,19 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1472050253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472050243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5944f5ed8b35e7b44ad06be2b1b0e372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TransformSaver
+  saveID: Player
 --- !u!1 &2048805582
 GameObject:
   m_ObjectHideFlags: 0
@@ -3828,6 +3886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2090b5459c5eba94b85089c7adc483c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreObserver
+  saveID: PlayerScore
   Scoretext: {fileID: 0}
 --- !u!1001 &312708605639549489
 PrefabInstance:
@@ -4025,6 +4084,9 @@ PrefabInstance:
       insertIndex: 3
       addedObject: {fileID: 1472050247}
     - targetCorrespondingSourceObject: {fileID: 7696701396863689697, guid: da379548c20328544a63b53498608ec8, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1472050253}
+    - targetCorrespondingSourceObject: {fileID: 7696701396863689697, guid: da379548c20328544a63b53498608ec8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1472050245}
     - targetCorrespondingSourceObject: {fileID: 7696701396863689697, guid: da379548c20328544a63b53498608ec8, type: 3}
@@ -4103,3 +4165,4 @@ SceneRoots:
   - {fileID: 331228247}
   - {fileID: 1181476075}
   - {fileID: 749728523}
+  - {fileID: 907325441}
