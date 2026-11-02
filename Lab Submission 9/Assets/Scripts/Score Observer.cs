@@ -78,6 +78,8 @@ public class ScoreObserver : MonoBehaviour, ISaveable
     // for everything in ISaveable that isn't used
     public TransformSaveData GetSaveData() => null;
     public void LoadFromData(TransformSaveData data) { }
+    public void PopulateSaveData(GameData data){}
+    public void LoadFromSaveData(GameData data){}
 
 }
 

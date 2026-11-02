@@ -42,4 +42,12 @@ public class TransformSaver : MonoBehaviour, ISaveable
     {
         
     }
+    public void PopulateSaveData(GameData data)
+    {
+        
+    }
+    public void LoadFromSaveData(GameData data)
+    {
+        
+    }
 }
